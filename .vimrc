@@ -27,7 +27,7 @@ syntax on
 filetype plugin indent on
 
 if !has("gui_running")
-	set term=xterm
+	set term=xterm256
 	set t_Co=256
 	let &t_AB="\e[48;5;%dm"
 	let &t_AF="\e[38;5;%dm"
