@@ -1,4 +1,6 @@
-set runtimepath=$HOME/vim
+if has("win_32")
+	set runtimepath=$HOME/vim
+endif
 
 execute pathogen#infect()
 syntax on
