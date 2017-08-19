@@ -1,3 +1,5 @@
+set runtimepath=$HOME/vim
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -16,9 +18,11 @@ let NERDTreeShowHidden=1
 set background=dark
 
 if has("gui_running")
+	set term=xterm
 	colorscheme desert256
 	set guifont=Source_Code_Pro_Semibold:h14:cANSI:qDRAFT
 else
+	set term=xterm
 	colorscheme desert
 	set guifont=Lucida_Console:h14:cANSI:qDRAFT
 endif
