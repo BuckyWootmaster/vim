@@ -2,15 +2,23 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set background=dark
-" colorscheme desert
-
 set nocompatible
 set backspace=indent,eol,start
+set autoindent
+set smarttab
+set vb
 
 inoremap <Char-0x07F> <BS>
 nnoremap <Char-0x07F> <BS>
 
-set vb
-
 let NERDTreeShowHidden=1
+
+set background=dark
+
+if has("gui_running")
+	colorscheme desert256
+	set guifont=Source_Code_Pro_Semibold:h14:cANSI:qDRAFT
+else
+	colorscheme desert
+	set guifont=Lucida_Console:h14:cANSI:qDRAFT
+endif
